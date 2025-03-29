@@ -42,7 +42,7 @@ def load_data(img_name, txt_name):
 
 # create tensorflow graph for landmark detector
 def load_lm_graph(graph_filename):
-    # LCX,下面语句在TF.GFILE.GFILE之间加入.IO.：
+    # LCX,下面语句在TF.GFILE之间加入.IO，使2.X兼容TF1.X：
     with tf.io.gfile.GFile(graph_filename, 'rb') as f:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
