@@ -17,7 +17,7 @@ from skimage import transform as trans
 import torch
 
 import warnings
-# LCX 修改使适合于NUMPY1.2以上版本,20250330:
+# LCX 修改使适合于NUMPY2.0以上版本,20250330:
 from numpy.exceptions import VisibleDeprecationWarning
 warnings.filterwarnings("ignore", category=VisibleDeprecationWarning) 
 warnings.filterwarnings("ignore", category=FutureWarning) 
